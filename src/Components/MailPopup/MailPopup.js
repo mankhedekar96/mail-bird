@@ -12,7 +12,7 @@ const MailPopup = ({ onClose }) => {
   const [body, setBody] = useState(editEmail?.body || "");
   const { user, refresh } = useContext(UserContext);
 
-  const handleSend = (e) => {
+  const handleSend = async (e) => {
     e.preventDefault();
     const uniqueId = Date.now().toString() + Math.random().toString();
     const emailObj = {
@@ -26,7 +26,7 @@ const MailPopup = ({ onClose }) => {
       unread: true
     };
 
-    createEmail(emailObj);
+    await createEmail(emailObj);
     // Close the popup
     refresh();
     onClose();

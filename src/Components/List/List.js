@@ -76,7 +76,10 @@ const List = ({ listData, type, email, setListData }) => {
         </div>
         <span>{item.subject}</span>
         <span>{item.attachment ? <IoAttachOutline /> : ''}</span>
-        <span>{`${item.created.getHours()}:${item.created.getMinutes()}`}</span>
+        <span>{
+        new Date().getDate() === item.created.getDate() ? 
+        `${item.created.getHours()}:${item.created.getMinutes()}` :
+        item.create.toLocaleDateString('en-us', { month:"short", day:"numeric"})}</span>
       </div>
     ));
   };
