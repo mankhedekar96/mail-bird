@@ -44,7 +44,7 @@ const MailPopup = ({ onClose }) => {
                 id="to"
                 className="form-control"
                 value={to}
-                onChange={(e) => setTo(e.target.value)}
+                onChange={(e) => setTo(e.target.value.toLowerCase())}
                 required
                 disabled={editEmail}
               />
@@ -56,7 +56,7 @@ const MailPopup = ({ onClose }) => {
                 id="cc"
                 className="form-control"
                 value={cc}
-                onChange={(e) => setCc(e.target.value)}
+                onChange={(e) => setCc(e.target.value.toLowerCase())}
                 disabled={editEmail}
               />
             </div>
