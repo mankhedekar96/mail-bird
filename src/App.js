@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import Tab from "./Components/Tab/Tab";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import pigeon from "./assets/pigeon.gif";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userEmail, setUserEmail] = useState('');
+  const checkUserToken = () => {
+    const userToken = localStorage.getItem("user-token");
+    setUserEmail(userToken);
+    if (!userToken || userToken === "undefined") {
+      setIsLoggedIn(false);
+    } else setIsLoggedIn(true);
+  };
+  useEffect(() => {
+    checkUserToken();
+  }, [isLoggedIn]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {!isLoggedIn && (
+        <>
+          <header className="header">
+            <div className="text-center mt-5 d-flex align-items-center justify-content-center">
+              <h3 className="mt-3">Mail - Bird</h3>
+              <img
+                width="50"
+                height="50"
+                className="mail-bird"
+                src={pigeon}
+                alt="logo"
+              />
+            </div>
+          </header>
+          <main>
+            <Tab />
+          </main>
+        </>
+      )}
+      {isLoggedIn && <Dashboard email={userEmail}/>}
     </div>
   );
 }

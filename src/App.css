@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.mail-bird-container, .mail-bird {
+  vertical-align: middle;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar-container{
+  background-color: #233746;
+  transition: all .2s linear;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar-closed{
+  width: 60px;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebar-open{
+  width: 260px;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar-btn{
+  background-color: #2e4051;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar-btn-active{
+  background-color: #233746;
+  border-left: 2px solid #07b494;
+}
+
+.sidebar-items-container{
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+}
+
+.sidebar-item{
+  margin: 10px auto;
+  font-weight: 500;
+}
+
+.sidebar-toggle{
+  background-color: #00b493;
+  border: none;
+  padding: 0px 10px 5px;
+  border-radius: 2px;
+}
+
+.dashboard-search{
+  border: 0;
+  margin-left: 15px;
+}
+
+.icon-badge-container{
+  position: relative;
+  padding: 0 8px;
+}
+
+.icon-badge{
+  position: absolute;
+  padding: 4px;
+  font-size: 12px;
+  right: 0px;
+  top: -10px;
+}
+
+.dashboard-menu{
+  width: 400px;
+}
+
+.compose-mail {
+  background-color: #00b493;
+}
+
+.compose-mail-search-container {
+  width: 300px;
+}
+
+.list-container-unread * {
+  font-weight: 700;
 }
