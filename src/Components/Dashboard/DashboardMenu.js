@@ -9,10 +9,11 @@ import { MailContext } from "../../Context/MailProvider";
 import { UserContext } from "../../Context/UserProvider";
 
 function DashboardMenu({ setView }) {
-  const { setShowModal } = useContext(MailContext);
+  const { setShowModal, setEditEmail } = useContext(MailContext);
   const { receivedEmails } = useContext(UserContext);
 
   const handleClick = () => {
+    setEditEmail(null);
     setShowModal(true);
   };
 
