@@ -15,7 +15,10 @@
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://mankhedekar96.github.io/mail-bird",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -38,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
