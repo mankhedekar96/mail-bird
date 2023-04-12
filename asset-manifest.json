@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mail-bird/static/css/main.cf5cac4d.css",
-    "main.js": "/mail-bird/static/js/main.893c6918.js",
+    "main.js": "/mail-bird/static/js/main.9f35f399.js",
     "static/js/787.ac2be16b.chunk.js": "/mail-bird/static/js/787.ac2be16b.chunk.js",
     "static/media/pigeon.gif": "/mail-bird/static/media/pigeon.0ee8cd1a8d21c3f0c7c4.gif",
     "index.html": "/mail-bird/index.html",
     "main.cf5cac4d.css.map": "/mail-bird/static/css/main.cf5cac4d.css.map",
-    "main.893c6918.js.map": "/mail-bird/static/js/main.893c6918.js.map",
+    "main.9f35f399.js.map": "/mail-bird/static/js/main.9f35f399.js.map",
     "787.ac2be16b.chunk.js.map": "/mail-bird/static/js/787.ac2be16b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf5cac4d.css",
-    "static/js/main.893c6918.js"
+    "static/js/main.9f35f399.js"
   ]
 }
