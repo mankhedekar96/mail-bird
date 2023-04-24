@@ -23,7 +23,8 @@ const MailPopup = ({ onClose }) => {
       subject,
       body,
       created: new Date(),
-      unread: true
+      unread: true,
+      labels: []
     };
 
     await createEmail(emailObj);

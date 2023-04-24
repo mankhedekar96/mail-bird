@@ -50,3 +50,25 @@ export function markEmails(emailId, type, ids){
         }
     });
 }
+
+export function readLabels(emailId){
+    return dbService.readItem(`${emailId}:labels`);
+}
+
+export function addUserLabels(emailId, updatedLabels){
+    return dbService.readItem(`${emailId}:labels`).then(labels => {
+      if (labels) dbService.updateItem(`${emailId}:labels`, updatedLabels);
+      else dbService.createItem(`${emailId}:labels`, updatedLabels);
+  });;
+}
+
+export function addLabelsToEmail(emailId, type, ids, labels){
+    return dbService.readItem(`${type}:${emailId}`).then(emails => {
+        if (emails) {
+            dbService.updateItem(`${type}:${emailId}`, emails.map(email => {
+              if(ids.includes(email.id)) email.labels = Array.from(new Set(labels));
+              return email;
+            }));
+        }
+    });
+}

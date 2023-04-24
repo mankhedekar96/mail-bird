@@ -78,3 +78,11 @@
 .list-container-unread * {
   font-weight: 700;
 }
+
+.labels-popup {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  top: calc(50vh - 150px);
+  left: calc(50vw - 250px);
+}
